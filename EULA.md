@@ -6,9 +6,9 @@
 
 ## 1. 사용 허락
 
-개발자는 사용자에게 소프트웨어를 **개인적 또는 업무적 용도로 사용할 수 있는, 비독점적이고 양도 불가능한 권리**를 부여합니다. 설치 가능한 기기 수에는 제한을 두지 않습니다.
+개발자는 사용자에게 소프트웨어를 **개인적 또는 업무적 용도로 사용할 수 있는, 비독점적이고 양도 불가능한 권리**를 부여합니다. 무료로 제공되는 기능은 설치 가능한 기기 수에 제한을 두지 않습니다.
 
-기본 기능은 무료로 제공됩니다. 별도로 **Pro 기능**이 제공되는 경우 유효한 라이선스 키를 보유한 사용자만 사용할 수 있으며, 구매·갱신·환불 조건은 구매 시점에 판매 페이지에 표시된 약관을 따릅니다.
+**Pro 기능**은 유효한 라이선스 키를 보유한 사용자만 사용할 수 있습니다. 라이선스 키 하나로 **최대 5대**의 Mac에서 활성화할 수 있고, 더 이상 쓰지 않는 기기는 앱에서 활성화를 해제해 다른 기기에 다시 쓸 수 있습니다. 구매·환불 조건은 구매 시점에 판매 페이지에 표시된 약관을 따릅니다.
 
 ## 2. 제한 사항
 
@@ -70,9 +70,9 @@ This agreement governs your use of **Mac Commander** (the "Software"), a macOS a
 
 ## 1. License grant
 
-The Developer grants you a non-exclusive, non-transferable right to use the Software for personal or business purposes. There is no limit on the number of devices.
+The Developer grants you a non-exclusive, non-transferable right to use the Software for personal or business purposes. Features provided free of charge carry no limit on the number of devices.
 
-Base features are free of charge. Where **Pro features** are offered, they require a valid license key; purchase, renewal, and refund terms are those shown on the purchase page at the time of purchase.
+**Pro features** require a valid license key. One key may be activated on up to **five** Macs; you can deactivate a device you no longer use in the app and reuse that activation elsewhere. Purchase and refund terms are those shown on the purchase page at the time of purchase.
 
 ## 2. Restrictions
 
