@@ -343,6 +343,8 @@ footer .sp{margin-left:auto}
           <span>5.3 MB</span><span class="dot">·</span>
           <span>무료</span><span class="dot">·</span>
           <span>자동 업데이트</span>
+          <!-- 다운로드 수는 일정 기준을 넘을 때만 스크립트가 채워 넣는다. -->
+          <span id="dlcount" hidden></span>
         </p>
       </div>
     </div>
@@ -547,6 +549,32 @@ footer .sp{margin-left:auto}
 </nav>
 
 <script>
+// 지금까지의 dmg 다운로드 수를 GitHub Releases에서 가져와 히어로에 덧붙인다.
+//
+// 숫자가 작을 때는 아예 그리지 않는다. "5회 다운로드"는 사회적 증거가 아니라 그 반대라서,
+// 기준을 넘길 때까지 조용히 있다가 저절로 나타나게 해 뒀다(나중에 손댈 필요가 없다).
+// 실패(오프라인·API 한도 초과)해도 조용히 넘어간다 — 페이지의 본론이 아니다.
+(function () {
+  var MIN_TO_SHOW = 50;
+  var el = document.getElementById('dlcount');
+  if (!el) return;
+
+  fetch('https://api.github.com/repos/codegeargit/mac-commander-releases/releases')
+    .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+    .then(function (releases) {
+      var total = releases.reduce(function (sum, rel) {
+        return sum + (rel.assets || []).reduce(function (s, a) {
+          return s + (/\.dmg$/.test(a.name) ? (a.download_count || 0) : 0);
+        }, 0);
+      }, 0);
+      if (total < MIN_TO_SHOW) return;
+      el.innerHTML = '<span class="dot">·</span>' +
+        '지금까지 ' + total.toLocaleString('ko-KR') + '번 받았습니다';
+      el.hidden = false;
+    })
+    .catch(function () { /* 숫자를 못 가져와도 페이지는 그대로 쓸 수 있다 */ });
+})();
+
 (function () {
   var bar = document.querySelector('.fbar');
   var links = Array.prototype.slice.call(bar.querySelectorAll('a'));
